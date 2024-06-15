@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <title>Resume</title>
+    <link
+    rel="icon"
+    href="https://w7.pngwing.com/pngs/512/824/png-transparent-visual-studio-code-hd-logo-thumbnail.png"
+  />
+  <style>
+     table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.bar-container {
+      width: 100%;
+      background-color: rgb(190, 178, 178);
+      border-radius: 6px;
+    }
+    .bar {
+      height: 6px;
+      border-radius: 5px;
+      background-color: black;}
+  </style>
+</head>
 <body>
-    <h1>My Resume</h1>
+   
 
-    <img alt="Profile pic" src="./WhatsApp Image 2024-06-03 at 12.27.56 PM.jpeg" width="100px" height="100px" />
-    <span> Skills: Html, Css, Javascript, React Native, MongoDB</span>
+    <img alt="Profile pic" src="./WhatsApp Image 2024-06-03 at 12.27.56 PM.jpeg" width="125px" height="125px"
+     style="border-radius: 50% "/>
     <hr>
-    <h1> Personal Information </h1>
-    <h3 style="font-size: 20px"> Name : Vinay Khobrekar </h3>
-    <p> Phone number - 9769794757</p>
-    <p> Email address - khobrekarvinay42@gmail.com</p>
-    <p> Address - 76/507, A Wing, Chembur </p>
+    <h2>
+        Personal Info
+    </h2>
+    <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Vinay Khobrekar</td>
+      </tr>
+      <tr>
+        <td>Phone number</td>
+        <td>9769794757</td>
+      </tr>
+      <tr>
+        <td>Email address</td>
+        <td>khobrekarvinay42@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>76/507, A Wing, Chembur</td>
+      </tr>
+      </tbody>
+      </table>
+
     <hr>
 
-    <h1> Education</h1>
+    <h2> Education</h2>
 
-    <table style="font-size: 15px; border-collapse: separate; border-spacing: 10px;">
-        <tr>
+    <table style="font-size: 15px; border: 1px solid ;">
+        <thead>
             <th>Year</th>
             <th>Percentage</th>
             <th>College</th>
-        </tr>
+        </thead>
+        <tbody>
         <tr>
             <td>2018</td>
             <td>85%</td>
@@ -35,22 +82,91 @@
         <td> 2024 </td>
         <td> 7 CGPA </td>
         <td> Vidyalankar Institute of Technology</td>
+        </tbody>
     </table>
     <hr> 
-    <h1> Projects </h1>
-    <h3>1. Personal Website</h3>
-  <ul>
-    <li>Designed and developed a personal website using HTML, CSS, and JavaScript</li>
-    <li>Created a responsive layout and implemented interactive elements</li>
-    <li>Optimized for search engines and showcased skills and experience</li>
-  </ul>
-  <h3>2. E-commerce Website</h3>
-  <ul>
-    <li>Collaborated with a local business to design and develop an e-commerce website using WordPress and WooCommerce</li>
-    <li>Created a user-friendly interface and implemented payment gateways</li>
-    <li>Optimized product pages for search engines and increased online presence and sales</li>
-  </ul>
-</div>
+    <h2> Projects </h2>
+    <table style="font-size:15px; width: 500px; height:100px; border: 1px solid ;">
+        <thead>
+            <th>Sr.no</th>
+            <th>Project</th>
+            <th>Description</th>
+        </thead>
+        <tbody> 
+            <tr>
+            <td> 1</td>
+            <td> Personal Website </td>
+            <td>Designed and developed a personal website using HTML, CSS, and JavaScript
+                Created a responsive layout and implemented interactive elements
+                Optimized for search engines and showcased skills and experience </td>
+               </tr>
+            <tr>
+            <td> 2 </td> 
+            <td> E-commerce Website </td>
+            <td> 
+                Collaborated with a local business to design and develop an e-commerce website using WordPress and WooCommerce
+                Created a user-friendly interface and implemented payment gateways
+                Optimized product pages for search engines and increased online presence and sales</td>
+              </tr> 
+        </tbody>
+    </table>
+   <hr> 
+   <br>
+    <table>
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>
+              <div class="bar-container">
+                <div class="bar" style="width: 50%;"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>
+              <div class="bar-container">
+                <div class="bar" style="width: 30%;"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>
+              <div class="bar-container">
+                <div class="bar" style="width: 10%;"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>React </td>
+            <td>
+              <div class="bar-container">
+                <div class="bar" style="width: 10%;"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>MongoDB</td>
+            <td>
+              <div class="bar-container">
+                <div class="bar" style="width: 10%;"></div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+          </table>
+          
+  
+    
+
+
 
     <!-- 1. Image  - img 
         2. Personal Information  - h1
