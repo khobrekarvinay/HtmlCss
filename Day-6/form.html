@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-container img {
+            border-radius: 20%;
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        hr {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0px;
+        }
+        h3 {
+            color: #555;
+            margin: 0;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        fieldset {
+            width: 50%;
+        border: 2px solid #333;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    legend {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"], input[type="tel"], select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #555;
+    }
+        
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="profile-container">
+        <img alt="Profile pic" src="./../WhatsApp Image 2024-06-03 at 12.27.56 PM.jpeg" />
+        
+    </div>
+    
+    <h2>Education</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Percentage</th>
+                <th>College</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2018</td>
+                <td>85%</td>
+                <td>Holy Family High School</td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>70%</td>
+                <td>Rao Junior College Science</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>7 CGPA</td>
+                <td>Vidyalankar Institute of Technology</td>
+            </tr>
+        </tbody>
+    </table>
+   
+    <h2>Contact Me</h2>
+    <form onsubmit="alert('Your response was received successfully'); return false;">
+        <fieldset >
+            <legend>Contact Me</legend>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    
+            <label for="topic">Topic:</label><br>
+            <input type="text" id="topic" name="topic" required><br><br>
+    
+            <label for="number">Phone Number:</label><br>
+            <input type="tel" id="number" name="number" pattern="[0-9]{10}" required><br><br>
+    
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+    
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+
+
+
+
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.869675155099!2d72.9951408759125!3d19.069466782133798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3c1c6aaaacd%3A0x1660edf108a1e4c4!2sAWDIZ%20%7C%20CCNA%20Linux%20Windows%20Digital%20Marketing%20Data%20Science%20Machine%20Learning%20Full%20Stack!5e0!3m2!1sen!2sin!4v1718432047094!5m2!1sen!2sin"
+        width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+       
+
+        <!-- Intro
+        education table 
+        contact me - Contact me - form fieldset -> message, topic, number -> dropdown -> gender  -> submit -> Alert()
+        location - end  --> 
+
+</body>
+
+</html>
