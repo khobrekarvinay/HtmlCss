@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #screen {
+            max-width: 100%;
+            /* border: 3px solid green; */
+        }
+
+        #navbar {
+            /* border: 3px solid red; */
+            width: 100%;
+            color: white;
+            height: 60px;
+            background-color: #252f25;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* flex-direction: row-reverse;
+        flex-direction: column;
+        flex-direction: column-reverse; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+        }
+
+        #leftDiv {
+            display: flex;
+            /* border: 1px solid white; */
+            width: 22%;
+            height: 80%;
+            justify-content: space-between;
+            /* border: 1px solid blue; */
+        }
+
+        #logoDiv {
+            width: 44%;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #logoDiv:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #addressDiv {
+            width: 54%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+
+        #addressDiv:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #addressP {
+            color: rgb(205, 204, 204);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #addressh5 {
+            font-size: 18px;
+            letter-spacing: 6px;
+        }
+
+        #centerDiv {
+            width: 50%;
+            /* border: 4px solid red; */
+            display: flex;
+            height: 66%;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        #centerDiv:focus-within {
+            border: 3px solid #faaa42;
+        }
+
+        /* input[type="text"]:focus {
+        border: 2px solid #faaa42;
+      } */
+
+        #centerSection {
+            height: 100%;
+            width: 8%;
+            /* border: 1px solid red; */
+            border-radius: 6px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgb(190, 190, 190);
+        }
+
+        #centerSection:hover {
+            background-color: #d5d5d5;
+        }
+
+        #centerSection p,
+        span {
+            font-size: 12px;
+            color: rgb(96, 96, 96);
+        }
+
+        #centerSearch {
+            height: 100%;
+            width: 84%;
+            /* border: 1px solid white; */
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+
+        #centerSearch input {
+            height: 24px;
+            width: 96%;
+            margin: auto;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+
+        #centerIcon {
+            height: 100%;
+            width: 8%;
+            /* border: 1px solid white; */
+            background-color: #febd69;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #centerIcon:hover {
+            background-color: #faaa42;
+        }
+
+        #centerIcon span {
+            font-size: 30px;
+            color: black;
+        }
+
+        #rightDiv {
+            width: 26%;
+            height: 100%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #rightLang {
+            width: 18%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rightLang>p {
+            margin-left: 6px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        #rightLang>span {
+            color: rgb(206, 206, 206);
+        }
+
+        #rightAccount {
+            width: 30%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        #rightAccount p {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #rightAccount span {
+            margin-top: -6px;
+        }
+
+        #rightOrders {
+            width: 16%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #rightOrders p {
+            font-size: 12px;
+        }
+
+        #rightCart {
+            width: 22%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rightCart span {
+            color: white;
+        }
+
+        #rightCart span:nth-child(1) {
+            font-size: 36px;
+        }
+
+        #rightCart span:last-child {
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 16px;
+        }
+
+        #body {
+            width: 100%;
+            /* border: 2px solid black; */
+            display: flex;
+
+        }
+
+        #filters {
+            width: 14%;
+            /* border: 2px solid black; */
+            height: 1000px;
+            padding: 15px;
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+
+        #products {
+            width: 82%;
+            /* border: 2px solid black; */
+        }
+
+        #products>h3 {
+            padding: 10px 0px;
+        }
+
+        #productsParent {
+            width: 100%;
+            /* border: 5px solid red; */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .productCard {
+            border: 1px solid rgb(215, 215, 215);
+            height: 566px;
+            width: 19em;
+            margin-bottom: 14px;
+            border-radius: 10px;
+        }
+
+        .imgCard {
+            width: 100%;
+            height: 54%;
+            display: flex;
+            justify-content: center;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+        }
+
+        .h-w-100 {
+            padding-top: 24px;
+            width: 42%;
+            height: 90%;
+        }
+
+        .proName {
+            padding: 10px;
+            padding-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* Number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+
+        .ratingDiv {
+            display: flex;
+            padding: 10px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .col-yellow {
+            color: #febd69;
+        }
+
+        .ratingDiv p {
+            color: #387689;
+            font-size: 16px;
+        }
+
+        .buyHistory {
+            padding: 10px;
+            padding-top: 0px;
+            font-size: 14px;
+            color: rgb(109, 109, 109);
+        }
+
+        .priceDiv {
+            display: flex;
+            padding: 10px;
+            padding-top: 0px;
+            padding-bottom: 2px;
+        }
+
+        .priceDiv span {
+            font-size: 14px;
+            color: black;
+        }
+
+        .priceDiv p:nth-child(2) {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .priceDiv p:nth-child(3) {
+            font-size: 12px;
+            color: rgb(109, 109, 109);
+        }
+
+        .priceDiv p:nth-child(3) span {
+            color: rgb(109, 109, 109);
+            text-decoration: line-through;
+        }
+
+        .offer {
+            padding: 10px;
+            padding-top: 0px;
+            font-size: 14px;
+            padding-bottom: 0px;
+        }
+
+        .emi {
+            padding: 10px;
+            padding-top: 0px;
+            font-size: 14px;
+            color: rgb(109, 109, 109);
+        }
+
+        .delivery {
+            padding: 10px;
+            padding-top: 0px;
+            font-size: 14px;
+        }
+
+        .install {
+            padding: 10px;
+            font-size: 14px;
+            padding-top: 0px;
+        }
+
+        #filters ul {
+            list-style-type: none;
+
+        }
+
+        #filters label {
+
+            margin-bottom: 0px;
+        }
+
+        #filters input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #filters input[type="range"] {
+            width: 80%;
+            margin-top: 5px;
+        }
+
+        #filters button {
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #febd69;
+            border: none;
+            color: #252f25;
+            cursor: pointer;
+        }
+
+        #filters button:hover {
+            background-color: #f0ad4e;
+        }
+
+        .price-range-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px;
+        }
+
+        .price-range {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .slider {
+            position: relative;
+            width: 300px;
+            height: 10px;
+            background: darkcyan;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .thumb {
+
+            width: 20px;
+            height: 20px;
+            background: aqua;
+            border-radius: 50%;
+            cursor: pointer;
+            top: -5px;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thumb::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .col-yellow {
+            color: #de7921;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        #rightCart>span:nth-child(1) {
+            display: none;
+        }
+
+        #rightCart>span:nth-child(2) {
+            display: none;
+        }
+
+        @media screen and (min-width: 0px) and (max-width: 750px) {
+            #screen {
+                max-width: 100%;
+                /* border: 3px solid green; */
+            }
+
+
+
+            #centerDiv {
+                display: none;
+            }
+
+            #addressDiv {
+                display: none;
+            }
+
+            #rightLang {
+                display: none;
+            }
+
+            #rightOrders {
+                display: none;
+            }
+
+            #menu {
+                display: block;
+            }
+
+            #navbar {
+                justify-content: space-between;
+            }
+
+            #leftDiv {
+                /* border: 2px solid white; */
+                justify-content: space-around;
+                width: 36%;
+                align-items: center;
+            }
+
+            #rightDiv {
+                /* border: 2px solid white; */
+                width: 36%;
+            }
+
+            #rightCart>span:nth-child(4) {
+                display: none;
+            }
+
+            #rightAccount {
+                display: none;
+            }
+
+            #rightCart>span:nth-child(1) {
+                display: block;
+                font-size: 28px;
+            }
+
+            #rightCart>span:nth-child(2) {
+                display: block;
+                font-size: 20px;
+            }
+
+            #rightCart {
+                width: 90%;
+                /* border: 2px solid white; */
+                justify-content: space-around;
+            }
+
+            #logoDiv {
+                width: 66%;
+            }
+
+            #products {
+                margin-left: 35px;
+                width: 70%;
+                /* border: 2px solid black; */
+            }
+
+            #productsParent {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .productCard {
+                display: flex;
+                flex-direction: row;
+                width: 130%;
+                height: 25%;
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .imgCard {
+                width: 200px;
+                /* Fixed width for the image */
+                height: px;
+                padding-right: 10px;
+                
+            }
+
+            .h-w-100 {
+                width: 100%;
+                height: auto;
+            }
+
+            .productCard>div:not(.imgCard) {
+                flex: 1;
+                /* Occupy rest of the space */
+                padding: 5px;
+            }
+
+            .productDetails {
+                flex: 1;
+                /* Occupy remaining space */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .proName,
+            .ratingDiv,
+            .buyHistory,
+            .priceDiv,
+            .offer,
+            .emi,
+            .delivery,
+            .install {
+                padding: 5px 0;
+            }
+
+            .priceDiv p:nth-child(2) {
+                font-size: 18px;
+            }
+
+
+            #filters {
+                display: none;
+            }
+
+
+
+            .h-w-100 {
+                width: 52%;
+                height: 80%;
+            }
+
+            .ratingDiv {
+                display: flex;
+                padding: 10px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+
+            }
+
+            .ratingDiv span {
+                font-size: 16px;
+            }
+
+            .ratingDiv>div:nth-child(1) {
+                /* border: 1px solid red; */
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+            .ratingDiv p {
+                padding-top: 0px;
+                color: #387689;
+                font-size: 14px;
+                padding-top: 0px;
+                padding-bottom: 2px;
+            }
+        }
+
+        @media screen and (min-width: 750px) and (max-width: 1150px) {
+            #screen {
+                max-width: 100%;
+                /* border: 3px solid green; */
+            }
+
+
+
+            #rightLang {
+                display: none;
+            }
+
+            .productCard {
+                width: 32%;
+            }
+
+            #addressDiv {
+                display: none;
+            }
+
+            #menu {
+                display: block;
+            }
+
+            #navbar {
+                justify-content: space-between;
+            }
+
+            #leftDiv {
+                /* border: 2px solid white; */
+                justify-content: space-around;
+                width: 30%;
+                align-items: center;
+            }
+            #products {
+                margin-left: 35px;
+                width: 70%;
+                /* border: 2px solid black; */
+            }
+
+            #productsParent {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .productCard {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 25%;
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .imgCard {
+                width: 150px;
+                /* Fixed width for the image */
+                height: 250px;
+                padding-right: 10px;
+                
+            }
+
+            .h-w-100 {
+                width: 80%;
+                height: 80%;
+            }
+
+            .productCard>div:not(.imgCard) {
+                flex: 1;
+                /* Occupy rest of the space */
+                padding: 5px;
+            }
+
+            .productDetails {
+                flex: 1;
+                /* Occupy remaining space */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .proName,
+            .ratingDiv,
+            .buyHistory,
+            .priceDiv,
+            .offer,
+            .emi,
+            .delivery,
+            .install {
+                padding: 5px 0;
+            }
+
+            .priceDiv p:nth-child(2) {
+                font-size: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div id="leftDiv">
+                <div id="menu">
+                    <span class="material-symbols-outlined"> menu </span>
+                </div>
+                <div id="logoDiv">
+                    <img style="height: 78%; width: 84%"
+                        src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png"
+                        alt="Amazon" />
+                </div>
+                <div id="addressDiv">
+                    <span class="material-symbols-outlined"> location_on </span>
+                    <div>
+                        <p id="addressP">Delivering to Mumbai 400070</p>
+                        <h5>Update Location</h5>
+                    </div>
+                </div>
+            </div>
+            <div id="centerDiv">
+                <div id="centerSection">
+                    <p>All</p>
+                    <span class="material-symbols-outlined"> arrow_drop_down </span>
+                </div>
+                <div id="centerSearch">
+                    <input type="text" placeholder="Search Amazon.in" />
+                </div>
+                <div id="centerIcon">
+                    <span class="material-symbols-outlined"> search </span>
+                </div>
+            </div>
+            <div id="rightDiv">
+                <div id="rightLang">
+                    <img style="height: 14px; width: 20px"
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+                        alt="flag" />
+                    <p>EN</p>
+                    <span class="material-symbols-outlined"> arrow_drop_down </span>
+                </div>
+                <div id="rightAccount">
+                    <p>Hello, sign in</p>
+                    <div style="display: flex">
+                        <h5>Account & List</h5>
+                        <span class="material-symbols-outlined"> arrow_drop_down </span>
+                    </div>
+                </div>
+                <div id="rightOrders">
+                    <p>Returns</p>
+                    <h5>& Orders</h5>
+                </div>
+                <div id="rightCart">
+                    <span class="material-symbols-outlined"> person </span>
+                    <span>Login</span>
+                    <span class="material-symbols-outlined"> shopping_cart </span>
+                    <span>Cart</span>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="filters">
+                <h4 style="margin-top: 10px;margin-bottom: 10px">Delivery Days:</h4>
+
+                <ul>
+                    <li style="display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center;">
+                            <input type="checkbox" id="delivery1" name="delivery" value="1">
+                            <label for="delivery1">Get it in 1 Day</label>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <input type="checkbox" id="delivery2" name="delivery" value="2">
+                            <label for="delivery2">Get it in 2 Days</label>
+                        </div>
+                    </li>
+                    <br>
+                    <h4> Price</h4>
+                    <p>₹10,000 - ₹99,999</p>
+                    <input type="range" id="priceRange" name="priceRange" min="0" max="100" value="50">
+                    <button id="priceGo">Go</button>
+
+
+                    <h4 style="margin-bottom:5px">Brands</h4>
+                    <input type="checkbox" id="brandSamsung" name="brand" value="Samsung">
+                    <label for="brandSamsung">Samsung</label><br>
+                    <input type="checkbox" id="brandWhirlpool" name="brand" value="Whirlpool">
+                    <label for="brandWhirlpool">Whirlpool</label><br>
+                    <input type="checkbox" id="brandLG" name="brand" value="LG">
+                    <label for="brandLG">LG</label><br>
+                    <input type="checkbox" id="brandGodrej" name="brand" value="Godrej">
+                    <label for="brandGodrej">Godrej</label><br>
+                    <input type="checkbox" id="brandHaier" name="brand" value="Haier">
+                    <label for="brandHaier">Haier</label><br>
+
+
+                    <br>
+                    <h4 style="margin-bottom: 5px;">Customer Rating:</h4>
+
+                    <i class="fa-solid fa-star" style="color: #de7921;"></i>
+                    <i class="fa-solid fa-star" style="color: #de7921;"></i>
+                    <i class="fa-solid fa-star col-yellow"></i>
+                    <i class="fa-solid fa-star col-yellow"></i>
+                    <i class="far fa-star col-yellow"></i>
+                    & Up
+                    <br>
+
+                    <label for="rating3">
+                        <i class="fa-solid fa-star col-yellow"></i>
+                        <i class="fa-solid fa-star col-yellow"></i>
+                        <i class="fa-solid fa-star col-yellow"></i>
+                        <i class="far fa-star col-yellow"></i>
+                        <i class="far fa-star col-yellow"></i>
+
+                        & Up
+                    </label><br>
+
+                    <br>
+                    <h4 style="margin-bottom: 5px;">Configuration:</h4>
+                    <input type="checkbox" id="config1" name="configuration" value="Freezer-on-Bottom">
+                    <label for="config1">Freezer-on-Bottom</label><br>
+                    <input type="checkbox" id="config2" name="configuration" value="Freezer-on-Top">
+                    <label for="config2">Freezer-on-Top</label><br>
+                    <input type="checkbox" id="config3" name="configuration" value="French Door">
+                    <label for="config3">French Door</label><br>
+                    <input type="checkbox" id="config4" name="configuration" value="Full-Sized">
+                    <label for="config4">Full-Sized</label><br>
+                    <input type="checkbox" id="config5" name="configuration" value="Internal Freezer">
+                    <label for="config5">Internal Freezer</label><br>
+                    <input type="checkbox" id="config6" name="configuration" value="Side-by-Side">
+                    <label for="config6">Side-by-Side</label><br>
+                    <input type="checkbox" id="config7" name="configuration" value="Full-Sized Side-by-Side">
+                    <label for="config7">Full-Sized Side-by-Side</label><br>
+
+
+            </div>
+            <div id="products">
+                <h3>Top deals</h3>
+                <div id="productsParent">
+                    <div class="productCard">
+                        <div class="imgCard">
+                            <img class="h-w-100" src="https://m.media-amazon.com/images/I/5134E0Z7iwL._AC_UY218_.jpg" />
+                        </div>
+                        <div class="productdetails">
+                            <div class="proName">
+                                <h3>Haier 602L, 3-Star, Frost Free, 100% Convertible Fridge Space, Expert Inverter
+                                    2-Door Side
+                                    by Side Refrigerator, (HRS-682KS, Black Steel)</h3>
+                            </div>
+                            <div class="ratingDiv">
+                                <p>4.5</p>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fas fa-star-half-alt col-yellow"></i>
+                            </div>
+                            <div class="buyHistory">
+                                1K+ bought in past month
+                            </div>
+                            <div class="priceDiv">
+                                <p>₹</p>
+                                <p>22,500</p>
+                                <p><span>₹25,000</span> 10% off</p>
+
+                            </div>
+                            <div class="offer">
+                                <h4>Special offers avail</h4>
+                            </div>
+                            <div class="emi">
+                                <p>EMI avail</p>
+                            </div>
+                            <div class="delivery">
+                                <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                            </div>
+                            <div class="install">
+                                <p>Free installation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productCard">
+                        <div class="imgCard">
+                            <img class="h-w-100" src="https://m.media-amazon.com/images/I/71szRr-FP5L._AC_UY218_.jpg" />
+                        </div>
+                        <div class="productdetails">
+
+                            <div class="proName">
+                                <h3>Samsung 236 L, 3 Star, Convertible, Digital Inverter with Display Frost Free Double
+                                    Door
+                                    Refrigerator (RT28C3733B1/HL, Black Matt, 2024 Model)</h3>
+                            </div>
+                            <div class="ratingDiv">
+                                <p>4.5</p>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fas fa-star-half-alt col-yellow"></i>
+                            </div>
+                            <div class="buyHistory">
+                                1K+ bought in past month
+                            </div>
+                            <div class="priceDiv">
+                                <p>₹</p>
+                                <p>25,500</p>
+                                <p><span>₹30,000</span> 15% off</p>
+
+                            </div>
+                            <div class="offer">
+                                <h4>Special offers avail</h4>
+                            </div>
+                            <div class="emi">
+                                <p>EMI avail</p>
+                            </div>
+                            <div class="delivery">
+                                <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                            </div>
+                            <div class="install">
+                                <p>Free installation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productCard">
+                        <div class="imgCard">
+                            <img class="h-w-100" src="https://m.media-amazon.com/images/I/61RzzJ3+iAL._AC_UY218_.jpg" />
+                        </div>
+                        <div class="productdetails">
+                            <div class="proName">
+                                <h3>Whirlpool 184 L 3 Star Direct-Cool Single Door Refrigerator (205 WDE CLS 3S SAPPHIRE
+                                    BLUE-Z,
+                                    Blue, 2023 Model)</h3>
+                            </div>
+                            <div class="ratingDiv">
+                                <p>4.5</p>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fa-solid fa-star col-yellow"></i>
+                                <i class="fas fa-star-half-alt col-yellow"></i>
+                            </div>
+                            <div class="buyHistory">
+                                1K+ bought in past month
+                            </div>
+                            <div class="priceDiv">
+                                <p>₹</p>
+                                <p>17,600</p>
+                                <p><span>₹20,000</span> 12% off</p>
+
+                            </div>
+                            <div class="offer">
+                                <h4>Special offers avail</h4>
+                            </div>
+                            <div class="emi">
+                                <p>EMI avail</p>
+                            </div>
+                            <div class="delivery">
+                                <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                            </div>
+                            <div class="install">
+                                <p>Free installation</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/61F7G4j0WgL._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Haier 596 L, Frost Free, Double Door, 100% Convertible Fridge Space Expert
+                                        Inverter,
+                                        2-Door
+                                        Side by Side Refrigerator WiFi & Water Dispenser (HRS-682SWDU1, Shiny Steel,
+                                        2024
+                                        Model)
+                                    </h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>32,200</p>
+                                    <p><span>₹35,000</span> 8% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/61i5qO9C0wL._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Haier 42 L Mini Refrigerator with Direct Cool Technology - Single Door Design,
+                                        Energy
+                                        Efficient, Compact Size - Ideal for Home, Office, and Dorm Rooms (Black Steel,
+                                        HRD-55KS,
+                                        2024 Model)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>22,400</p>
+                                    <p><span>₹28,000</span> 20% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/51pFui6nX4L._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+                                <div class="proName">
+                                    <h3>Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray
+                                        Direct
+                                        Cool
+                                        Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>15,300</p>
+                                    <p><span>₹18,000</span> 15% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/41E24LkWkyL._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Samsung 236 L, 3 Star, Convertible, Digital Inverter with Display Frost Free
+                                        Double
+                                        Door
+                                        Refrigerator (RT28C3733B1/HL, Black Matt, 2024 Model)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>26,240</p>
+                                    <p><span>₹32,000</span> 18% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/51J2emkSDLL._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Godrej 183 L 3 Star Farm Fresh Crisper Technology With Jumbo Vegetable Tray
+                                        Direct
+                                        Cool
+                                        Single Door Refrigerator (2024 Model, RD R190C THF AQ WN, Aqua Wine)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>20,700</p>
+                                    <p><span>₹23,000</span> 10% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/51FJ-6IDORL._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator
+                                        (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>20,250</p>
+                                    <p><span>₹27,000</span> 25% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>Free delivery</p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/71dwW6Z3IvL._AC_UL320_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Samsung 183 L, 5 Star, Digital Inverter, Direct-Cool Single Door Refrigerator
+                                        (RR20D2825HV/NL, Himalaya Poppy Blue, Base Stand Drawer, 2024 Model)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>18,480</p>
+                                    <p><span>₹21,000</span> 12% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="imgCard">
+                                <img class="h-w-100"
+                                    src="https://m.media-amazon.com/images/I/51rI+jSqx5L._AC_UY218_.jpg" />
+                            </div>
+                            <div class="productdetails">
+
+                                <div class="proName">
+                                    <h3>Haier 602L, 3-Star, Frost Free, 100% Convertible Fridge Space, Expert Inverter
+                                        2-Door Side
+                                        by Side Refrigerator, (HRS-682KS, Black Steel)</h3>
+                                </div>
+                                <div class="ratingDiv">
+                                    <p>4.5</p>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fa-solid fa-star col-yellow"></i>
+                                    <i class="fas fa-star-half-alt col-yellow"></i>
+                                </div>
+                                <div class="buyHistory">
+                                    1K+ bought in past month
+                                </div>
+                                <div class="priceDiv">
+                                    <p>₹</p>
+                                    <p>22,800</p>
+                                    <p><span>₹24,000</span> 5% off</p>
+
+                                </div>
+                                <div class="offer">
+                                    <h4>Special offers avail</h4>
+                                </div>
+                                <div class="emi">
+                                    <p>EMI avail</p>
+                                </div>
+                                <div class="delivery">
+                                    <p>FREE delivery as soon as <b>Thu, 4 Jul, 7 am - 3 pm</b></p>
+                                </div>
+                                <div class="install">
+                                    <p>Free installation</p>
+                                </div>
+                                <div class="productdetails">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+</body>
+
+</html>
