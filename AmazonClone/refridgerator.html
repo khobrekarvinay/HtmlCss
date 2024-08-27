@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigerator product</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+         * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            height: 60px;
+            color: white;
+            display: flex;
+            background-color: #131921;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #leftDiv {
+            display: flex;
+            width: 26%;
+            height: 80%;
+            justify-content: space-evenly;
+        }
+
+        .logoDiv {
+            width: 36%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logoDiv:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #addressDiv {
+            width: 58%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #addressDiv:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #addressP {
+            font-size: 12px;
+            font-weight: 500;
+            color: #c6c4c7;
+        }
+
+        #addressDiv span {
+            color: white;
+        }
+
+        #centerDiv {
+            width: 43%;
+            display: flex;
+            height: 65%;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        #centerDiv:focus-within {
+            border: 3px solid #faaa42;
+        }
+
+        #allsec {
+            width: 8%;
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border-radius: 6px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-right: 1px solid rgb(190, 190, 190);
+        }
+
+        #allsec p,
+        span {
+            color: rgb(96, 96, 96);
+            font-size: 12px;
+        }
+
+        #allsec:hover {
+            background-color: #d5d5d5;
+        }
+
+        #inputcol {
+            height: 100%;
+            width: 84%;
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+
+        }
+
+        #inputcol input {
+            height: 24px;
+            width: 96%;
+            margin: auto;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+
+        #icon {
+            width: 8%;
+            height: 100%;
+            background-color: #febd69;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        #icon span {
+            font-size: 30px;
+            color: black;
+        }
+
+        #icon:hover {
+            background-color: #faaa42;
+        }
+
+        #rightDiv {
+            width: 29%;
+            /* border: 1px solid white; */
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #lang {
+            width: 18%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lang>p {
+            margin-left: 6px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        #lang>span {
+            color: rgb(206, 206, 206);
+        }
+
+        #lang:hover {
+            border: 1px solid white;
+            margin: 5px 0px 5px 0px;
+        }
+
+        #account {
+            width: 30%;
+            /* border: 1px solid white;  */
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+        }
+
+        #account p {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #account span {
+            margin-top: -6px;
+            color: rgb(206, 206, 206);
+        }
+
+        #account:hover {
+            border: 1px solid white;
+            margin: 5px 0px 5px 0px;
+        }
+
+        #orders {
+            width: 16%;
+            /* border: 1px solid white; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #orders p {
+            font-size: 12px;
+        }
+
+        #orders:hover {
+            border: 1px solid white;
+            margin: 5px 0px 5px 0px;
+        }
+
+        #cart {
+            width: 22%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cart span {
+            color: white;
+        }
+
+        #cart span:last-child {
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 16px;
+        }
+
+        #cart:hover {
+            border: 1px solid white;
+            margin: 5px 0px 5px 0px;
+        }
+
+        #navbar-2 {
+            height: 40px;
+            background-color: #232f3e;
+            display: flex;
+            /* justify-content: space-around; */
+
+        }
+
+        #p1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #p1 span {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: #fffff3;
+        }
+
+        #p1 p {
+            color: #fffff3;
+            font-size: 14px;
+            padding: 10px 10px;
+        }
+
+        #p1 p:hover {
+            border: 1px solid white;
+            margin: 6px 0px 6px 0px;
+        }
+
+        #span1:hover {
+            border: 1px solid white;
+            margin: 22px 0px 22px 0px;
+        }
+
+        #span2:hover {
+            border: 1px solid white;
+            margin: 22px 0px 22px 0px;
+
+        }
+        #navbar3 {
+            height: 50px;
+            background-color: #ffffff;
+
+            align-items: center;
+
+            border: 2px solid #cfcfcf;
+            display: flex;
+        }
+
+        #protypes {
+            display: flex;
+            font-size: 12px;
+            justify-content: space-around;
+        }
+
+        #protypes p {
+            margin-left: 28px;
+            color: #5a5d5a;
+        }
+
+        #protypes p:nth-child(1) {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* product-page */
+        .home_and_Kitchen {
+        height: 40px;
+        /* border: 2px solid green; */
+        padding-top: 2px;
+        padding-left: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        color: rgb(86, 89, 89);
+      }
+
+      .back_to_results {
+        height: 30px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        color: rgba(86, 89, 89);
+        /* text-decoration: none; */
+      }
+
+      .back_to_results span {
+        font-size: 11px;
+      }
+      .noDecoration,
+      a:link,
+      a:visited {
+        color: rgba(86, 89, 89);
+        text-decoration: none;
+      }
+
+      /* four divs of fridge */
+      .parent_div {
+        /* border: 2px solid purple; */
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .first_left_div {
+        /* border: 1px solid black; */
+        width: 4%;
+      }
+      .first_left_div p {
+        padding-top: 0;
+        font-size: 11px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(86, 89, 89);
+        font-weight: 700;
+        text-align: center;
+        line-height: 16px;
+      }
+      .first_left_div img {
+        margin-top: 5px;
+        margin-left: 12px;
+        border: 1px solid black;
+        border-radius: 8px;
+      }
+      .first_left_div img:hover {
+        border: 2px solid cyan;
+      }
+      .fridge_img_div {
+        border: 1px solid rebeccapurple;
+        background-color: #fff;
+        width: 30%;
+        min-height: 500px;
+      }
+      .fridge_img_div span {
+        margin-left: 90%;
+        color: black;
+      }
+      .fridge_img_div img {
+        /* max-width: 400px; */
+        width: 90%;
+        max-height: 550px;
+      }
+      .fridge_img_div p {
+        text-align: center;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+        font-weight: 400;
+        color: rgba(86, 89, 89);
+      }
+      .fridge_information {
+        /* border: 1px solid yellow; */
+        width: 40%;
+      }
+      .fridge_info_heading {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        color: rgb(15, 17, 17);
+      }
+      .amazonsChoice {
+        align-items: center;
+        display: flex;
+      }
+      .great_discount {
+        /* border: blue 1px solid; */
+        height: 18px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 100px;
+        background-color: #cc0c39;
+        padding: 4px 10px;
+        color: white;
+        font-weight: 550;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+      .second_right_div {
+        border: 1px solid #dadede;
+        border-radius: 8px;
+        width: 15%;
+      }
+      .offers_section {
+        /* border: 1px solid black;  */
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .inside_offers {
+        width: 150px;
+        height: 100px;
+        /* border: 1px solid black; */
+        box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1),
+          2px 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        line-height: 18.2px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(15, 17, 17);
+      }
+      .small_icons {
+        display: flex;
+        justify-content: space-evenly;
+        /* border: 1px solid blue; */
+        height: 100px;
+      }
+      .small_icons img {
+        /* border: 1px solid red; */
+        margin-top: 5px;
+        height: 35px;
+      }
+      .small_icons p {
+        /* border: 1px solid orange; */
+        width: 80px;
+        margin-top: 5px;
+        /* text-align: justify; */
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 15.6px;
+        color: rgb(0, 113, 133);
+      }
+      .about_items {
+        margin-left: 20px;
+      }
+      #about_items_ul {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: rgb(15, 17, 17);
+      }
+      .fourth_parent_div {
+        border: 2px solid #d9dcdc;
+        border-radius: 10px;
+        width: 16%;
+        height: 100%;
+        justify-content: space-around;
+      }
+      .fourth_kid_one {
+        padding: 10px 10px;
+        justify-content: space-around;
+        /* border: 1px solid black; */
+      }
+      .fourth_kid_first {
+        display: flex;
+        /* border: 1px solid black; */
+        align-items: center;
+        padding-left: 0px;
+        justify-content: space-between;
+      }
+      .fourth_kid_first :first-child {
+        font-size: 14px;
+        color: rgb(15, 17, 17);
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+      }
+      .fourth_kid_one > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #b5270a;
+      }
+      .fourth_kid_two {
+        /* border: 1px solid black; */
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 10px;
+      }
+      .fourth_kid_two_p {
+        display: flex;
+        align-items: center;
+
+        border: 1px solid black;
+        border-radius: 14px;
+        height: 25px;
+        color: black;
+        width: 210px;
+        padding: 2px 0 2px 6px;
+      }
+      .fourth_kid_two_p:hover {
+        border: 2px solid #177c94;
+      }
+      .fourth_span_one {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: black;
+        text-align: center;
+      }
+      .fourth_kid_two p {
+        /* border: 1px solid fuchsia; */
+        margin: 10px 10px;
+        /* text-align: center; */
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: #177c94;
+      }
+      .fourth_span {
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+      .fourth_kid_three {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: black;
+        margin-left: 50px;
+        /* border: 1px solid green; */
+      }
+      .address_text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #177c94;
+        /* border: 1px solid yellowgreen; */
+      }
+      .address_text :hover {
+        color: #b5270a;
+      }
+      .in_stock {
+        /* text-align: center; */
+        justify-content: space-evenly;
+        margin-left: 5px;
+      }
+      li{
+        list-style-type: none;
+      }
+      #Quantity_dropdown{
+        margin-left: 10px;
+        color: black;
+        /* border: 1px solid blue; */
+      }
+      #add_to_cart{
+        margin-left: 20px;
+        justify-content: space-around;
+        align-items: center;
+        
+      }
+      .add_to_cart{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin: 10px 0 10px 0;
+        width: 200px;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid #ffd814;
+        background-color: #ffd814;
+        border-radius: 16px;
+      }
+      .secure_transaction{
+        /* border: 1px solid blue; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        
+      }
+      
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="leftDiv">
+            <!-- <div id="menu">
+                <span class="material-symbols-outlined"> menu </span>
+            </div> -->
+            <div class="logoDiv">
+                <img style="height: 78%; width: 84%;
+                " src="./Amazon-India-Logo-PNG-White-removebg-preview.png" alt="Amazon" />
+
+            </div>
+            <div id="addressDiv">
+                <span class="material-symbols-outlined">location_on</span>
+                <div>
+                    <p id="addressP">Delivering to Bhiwandi 421308</p>
+                    <h5>Update location</h5>
+                </div>
+            </div>
+        </div>
+        <div id="centerDiv">
+            <div id="allsec">
+                <p>All</p>
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+
+            </div>
+            <div id="inputcol">
+                <input type="text" placeholder="Search Amazon.in" />
+            </div>
+            <div id="icon">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+            </div>
+
+        </div>
+        <div id="rightDiv">
+            <div id="lang">
+                <img style="height: 14px; width: 20px;"
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+                    alt="flag" />
+                <p>EN</p>
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+            </div>
+            <div id="account">
+                <p>Hello, sign in</p>
+                <div style="display: flex;">
+                    <h5>Accounts&Lists</h5>
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                </div>
+            </div>
+            <div id="orders">
+                <p>Returns</p>
+                <h5>&Orders</h5>
+            </div>
+            <div id="cart">
+                <!-- <span class="material-symbols-outlined">person</span>
+                <span>Login</span> -->
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+                <span>Cart</span>
+            </div>
+        </div>
+    </div>
+    <div id="navbar-2">
+        <div id="p1">
+            <div style="display: flex;" id="span1">
+                <span style=" margin-left: 14px; font-size: 27px; font-weight: 500;" class="material-symbols-outlined">
+                    menu
+                </span>
+                <span style="font-weight: 500; font-size: 14px;">All</span>
+            </div>
+            <p>Amazon miniTV</p>
+            <p>Sell</p>
+            <p>Best Sellers</p>
+            <p>Mobiles</p>
+            <p>Today's Deals</p>
+            <p>Fashion</p>
+            <div style="display: flex;" id="span2">
+                <span style="font-size: 14px;">Prime</span>
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+            </div>
+            <p>Electronics</p>
+            <p>Customer Service</p>
+            <p>New Releases</p>
+            <p>Home&Kitchen</p>
+            <p>Amazon Pay</p>
+            <p>Computers</p>
+            <p>Books</p>
+        </div>
+
+    </div>
+    <div id="navbar3">
+        <div id="protypes">
+            <p>Amazon Home</p>
+            <p>Kitchen & Home Appliances</p>
+            <p>Large Appliances</p>
+            <p>Kitchen & Dining</p>
+            <p>Furiture</p>
+            <p>Home Furnishing</p>
+            <p>Home Decor</p>
+            <p>Home Improvement</p>
+            <p>Garden & Outdoor</p>
+            <p>Storage & Organization</p>
+            <p>Lighting</p>
+            <p></p>
+        </div>
+    </div>
+     <div class="home_and_Kitchen">
+        <span>Home & Kitchen</span>
+        <span style="font-size: 12px" class="material-symbols-outlined">
+          chevron_right
+        </span>
+        <span>Deals on Refrigerators - Great Summer Sale</span>
+      </div>
+      <div class="parent_div">
+        <div class="first_left_div">
+          <img
+            src="https://m.media-amazon.com/images/I/41OJYnAxw3L._SX38_SY50_CR,0,0,38,50_.jpg"
+            alt=""
+          />
+          <div style="align-items: center">
+            <img
+              src="https://m.media-amazon.com/images/I/51E43NmdvBL._SX35_SY46._CR0,0,35,46_BG85,85,85_BR-120_PKdp-play-icon-overlay__.jpg"
+              alt=""
+            />
+            <p class=".first_left_div p">Video</p>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/515uwNsffwL._SX38_SY50_CR,0,0,38,50_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/51HZec3u6RL._SX38_SY50_CR,0,0,38,50_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/51sg2mA2pSL._SX38_SY50_CR,0,0,38,50_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/41HJi8f4KIL._SX38_SY50_CR,0,0,38,50_.jpg"
+            alt=""
+          />
+          <img src="https://m.media-amazon.com/images/G/31/HomeCustomProduct/360_icon_73x73v2._CB485971317_SX38_SY50_CR,0,0,38,50_FMpng_RI_.png"
+          alt="360 degree"/>
+        </div>
+        <div class="fridge_img_div">
+          <span class="material-symbols-outlined"> ios_share </span>
+          <img
+            style="border: 1px solid orangered"
+            src="https://m.media-amazon.com/images/I/71dwW6Z3IvL._SY679_.jpg"
+            alt="Whirlpool 184 L 2 Star Direct-Cool Single Door Refrigerator"
+          />
+          <p>Roll over image to zoom in</p>
+        </div>
+        <div class="fridge_information">
+          <p class="fridge_info_heading">
+            Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator 
+            (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer, 2024 Model)
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              color: #60c4e2;
+              font-weight: 400;
+              font-family: Arial, Helvetica, sans-serif;
+            "
+          >
+            Visit the Whirlpool Store
+          </p>
+          <span style="align-items: center; display: flex"
+            ><span style="font-size: 14px">4.3</span>
+            <span class="material-symbols-outlined"> star </span>
+            <span class="material-symbols-outlined"> star </span>
+            <span class="material-symbols-outlined"> star </span>
+            <span class="material-symbols-outlined"> star </span>
+            <span class="material-symbols-outlined"> star </span>
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+            <span style="color: #379bc0; font-size: 14px"
+              >5,420 ratings | Search this page</span
+            >
+          </span>
+
+          <span class="amazonsChoice">
+            <img
+              style="height: 30px; width: 130px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqQN8IYDB2uKIO0PjD1jxtPmj894_01unMkA&s"
+              alt=""
+            />
+          </span>
+
+          <p style="margin: 8px; font-size: 12px">900+ bought in past month</p>
+          <hr />
+          <div>
+            <p class="great_discount">Great Indian Sale</p>
+            <span style="color: #cc0c39; font-size: 28px; font-weight: 400"
+              >-27%</span
+            ><span
+              style="
+                font-size: 28px;
+                font-weight: 400;
+                line-height: normal;
+                color: rgb(15, 17, 17);
+              "
+            >
+              ₹16,790</span
+            >
+            <p style="font-size: 12px; text-decoration: line-through">
+              M.R.P.: ₹22,999
+            </p>
+            <p style="margin: 6px">Inclusive of all taxes</p>
+            <div style="display: flex; align-items: center">
+              <span
+                ><p style="font-size: 14px; color: black">
+                  <b>EMI</b> starts at ₹814. No Cost EMI available
+                </p></span
+              >
+              <span style="font-size: 14px; margin-left: 5px; color: #379bc0"
+                >EMI options</span
+              >
+              <span class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; margin-bottom: 12px"
+            >
+              <span class="material-symbols-outlined">
+                check_box_outline_blank
+              </span>
+              <span><p style="margin-right: 14px">Apply ₹500 coupon</p></span>
+              <span>Terms </span>
+              <span class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </div>
+            <hr />
+            <div style="margin-top: 10px; margin-bottom: 20px">
+              <h3 style="margin-left: 20px">Offers</h3>
+              <div class="offers_section">
+                <div class="inside_offers">
+                  <h3>Bank Offer</h3>
+                  <p>Upto ₹500.00 discount on SBI Credit Cards</p>
+                  <div style="display: flex; align-items: center">
+                    <p>1 offer</p>
+                    <span class="material-symbols-outlined">
+                      chevron_right
+                    </span>
+                  </div>
+                </div>
+
+                <div class="inside_offers">
+                  <h3>No Cost EMI</h3>
+                  <p>
+                    Upto ₹669.48 EMI interest savings on select Credit Cards…
+                  </p>
+                  <div style="display: flex; align-items: center">
+                    <p>3 offers</p>
+                    <span class="material-symbols-outlined">
+                      chevron_right
+                    </span>
+                  </div>
+                </div>
+
+                <div class="inside_offers">
+                  <h3>Partner Offers</h3>
+                  <p>
+                    Get GST invoice and save up to 28% on business purchases.
+                  </p>
+                  <div style="display: flex; align-items: center">
+                    <p>1 offer</p>
+                    <span class="material-symbols-outlined">
+                      chevron_right
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="small_icons">
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/G/31/VAS/TrustWidget/Service._CB607276514_.png"
+                  alt=""
+                />
+                <p>Setup at delivery available</p>
+              </span>
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/81_81_Amazon_protect._CB433588194_.png"
+                  alt=""
+                />
+                <p>1 Year Warranty Care</p>
+              </span>
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png"
+                  alt=""
+                />
+                <p>1 Year Warranty</p>
+              </span>
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png"
+                  alt=""
+                />
+                <p>10 days Replacement by Brand</p>
+              </span>
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/trust_icon_free_shipping_81px._CB630870460_.png"
+                  alt=""
+                />
+                <p>Free Delivery</p>
+              </span>
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB485933725_.png"
+                  alt=""
+                />
+                <p>Amazon Delivered</p>
+              </span>
+            </div>
+            <hr />
+            <div class="about_items">
+              <h3>About this item</h3>
+              <ul id="about_items_ul">
+                <li>
+                    Direct Cool Refrigerator: Stylish Single Door Refrigerator with Modern Camellia Purple pattern. Enjoy
+                     powerful cooling that can last longer
+                </li>
+                <li>Capacity 183 liters: Suitable for families with 2 to 3 members</li>
+                <li>Energy Rating : 4 Star Energy Efficiency</li>
+                <li>Manufacturer Warranty : The product comes with a 1 year comprehensive warranty and 
+                    a 20 years warranty on the digital inverter compressor</li>
+                <li>
+                    Digital Inverter Compressor provides greater energy efficiency, less noise and
+                     long-lasting performance while consuming 50% less power, backed up by 20 year warranty
+                </li>
+                <li>
+                    Interior Description : Fresh Food Capacity : 165 Ltr | Freezer Capacity : 18 Ltr | Total no. of compartments : 1 | Shelves : 2 | Vegetable Drawers : 1 | Shelf Type : Toughened Glass Shelves | Anti Bacterial 
+                    Gasket | Base stand with Drawer for additional space for non-refrigerated food items
+                </li>
+                <li>
+                    Special Features : Fresh room | Grande Door Design | Stabilizer Free Operation (100v - 300v) | Smart Connect Inverter (Automatic) | Up to 15 Days of Fresh Food | Bar Handle | Lock & Key
+                </li>
+              </ul>
+              <div style="align-items: center; display: flex">
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down </span
+                ><span style="color: #68c1ea; font-size: 14px; font-weight: 400"
+                  >Show more</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fourth_parent_div">
+          <div class="fourth_kid_one">
+            <div class="fourth_kid_first">
+              <span>With Exchange</span><span><input type="radio" /></span>
+            </div>
+            <p>Up to ₹ 2,280.00 off</p>
+          </div>
+          <div class="fourth_kid_two">
+            <span class="fourth_kid_two_p">
+              <span class="fourth_span_one">Choose product to exchange</span>
+              <span class="material-symbols-outlined"> chevron_right </span>
+            </span>
+            <p>How does exchange work?</p>
+          </div>
+          <div class="fourth_kid_one">
+            <div class="fourth_kid_first">
+              <span>Without Exchange</span><span><input type="radio" /></span>
+            </div>
+            <span style="color: #b22719" class="fourth_span">₹ 12,590.00</span>
+            <span style="text-decoration: line-through" class="fourth_span"
+              >₹ 15,400.00</span
+            >
+          </div>
+          <div>
+            <span class="fourth_kid_three"
+              >FREE scheduled delivery as soon as
+              <b>Wednesday, 21 August, 7 AM - 9 PM.</b></span
+            >
+            <span class="fourth_kid_three" style="color: #177c94">Details</span>
+          </div>
+          <div style="align-items: center; display: flex; margin: 10px 10px">
+            <span class="material-symbols-outlined"> location_on </span>
+            <span class="address_text"
+              >Delivering to Navi Mumbai 410210 - Update Location</span
+            >
+          </div>
+          <div class="in_stock">
+            <p
+              style="
+                font-size: 18px;
+                color: rgb(0, 188, 0);
+                font-weight: 400;
+                line-height: 24px;
+              "
+            >
+              In stock
+            </p>
+            <div>
+            <span style="font-size: 12px;color: black;"><pre style="margin-top: 10px;">Ships from &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amazon</span></pre>
+            </div>
+            <div>
+                <span style="font-size: 12px;color: black;">
+                  <pre style="margin:10px 0 10px 0;">Sold by       &nbsp;&nbsp;&nbsp;&nbsp;DAWNTECH
+                       ELECTRONICS PRIVATE
+                       LIMITED</pre>
+              </span>
+            </div>
+          </div>
+          <div id="Quantity_dropdown">
+          <label for="product_quantity">Quantity:</label>
+          <select name="product_quantity" id="product_quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div id="add_to_cart">
+         <p class="add_to_cart">Add to Cart</p>
+          <p class="add_to_cart" style="background-color: #ffa41c;">Buy Now</p>
+        </div>
+        <div class="secure_transaction">
+        <span class="material-symbols-outlined">
+          lock
+          </span><p style="color: #177c94;">Secure Transaction</p>
+        </div>
+        <div class="secure_transaction">
+          <input type="checkbox" name="" id="">
+          <p>Add gift options</p>
+        </div>
+        
+        </div>
+       
+      </div>
+    </div>
+</body>
+</html>
