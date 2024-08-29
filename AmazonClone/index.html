@@ -705,9 +705,10 @@
 
 
         }
+
         .transparent-image {
-  opacity: 0;
-}
+            opacity: 0;
+        }
 
         .card-product h2 {
             margin: 0;
@@ -881,7 +882,8 @@
                 </div>
                 <div id="logoDiv">
                     <img style="height: 78%; width: 84%"
-                        src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png" alt="Amazon" />
+                        src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png"
+                        alt="Amazon" />
                 </div>
                 <div id="addressDiv">
                     <span class="material-symbols-outlined"> location_on </span>
@@ -1004,6 +1006,12 @@
                 if (currentIndex >= images.length) currentIndex = 0;
                 images[currentIndex].classList.add('active');
             });
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex++;
+                if (currentIndex >= images.length) currentIndex = 0;
+                images[currentIndex].classList.add('active');
+            }, 5000);
         </script>
         <!-- product card -->
 
@@ -1088,9 +1096,9 @@
                     <button class="card-product-btn">see more</button>
                 </div>
                 <div class="card-product" style="background-color: transparent">
-                    <h2 ></h2>
+                    <h2></h2>
                     <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img24/AugART24/GW/MainEvent/AugART24_GW_PC_CC_Event_1x._SY304_CB566254168_.jpg"
-                       class="transparent-image" alt="" />
+                        class="transparent-image" alt="" />
 
 
                     <button class="card-product-btn"></button>
