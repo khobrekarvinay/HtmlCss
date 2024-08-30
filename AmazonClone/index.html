@@ -255,8 +255,16 @@
 
         #rightCart a span.material-symbols-outlined {
             display: inline-block !important;
-            color: red !important;
+            
             font-size: 36px !important;
+        }
+
+        #rightCart span:nth-child(1) {
+            display: none;
+        }
+
+        #rightCart span:nth-child(2) {
+            display: none;
         }
 
 
@@ -607,13 +615,7 @@
             display: none;
         }
 
-        #rightCart span:nth-child(1) {
-            display: none;
-        }
 
-        #rightCart span:nth-child(2) {
-            display: none;
-        }
 
         /* /*product card container"/ */
         .image-item {
@@ -799,9 +801,7 @@
             width: 100%;
         }
 
-        .discount_Container {
-            /* border: 2px solid red; */
-        }
+
 
         .discount_Container a:first-child {
             background-color: #d32e55;
@@ -881,9 +881,11 @@
                     <span class="material-symbols-outlined"> menu </span>
                 </div>
                 <div id="logoDiv">
-                    <img style="height: 78%; width: 84%"
-                        src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png"
-                        alt="Amazon" />
+                    <a href="index.html">
+                        <img style="height: 78%; width: 84%"
+                            src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png"
+                            alt="Amazon" />
+                    </a>
                 </div>
                 <div id="addressDiv">
                     <span class="material-symbols-outlined"> location_on </span>
@@ -915,11 +917,13 @@
                     <span class="material-symbols-outlined"> arrow_drop_down </span>
                 </div>
                 <div id="rightAccount">
-                    <p>Hello, sign in</p>
-                    <div style="display: flex">
-                        <h5>Account & List</h5>
-                        <span class="material-symbols-outlined"> arrow_drop_down </span>
-                    </div>
+                    <a style="color: inherit; text-decoration: none;"href="account.html">
+                        <p>Hello, sign in</p>
+                        <div style="display: flex">
+                            <h5>Account & List</h5>
+                            <span class="material-symbols-outlined"> arrow_drop_down </span>
+                        </div>
+                    </a>
                 </div>
                 <div id="rightOrders">
                     <p>Returns</p>

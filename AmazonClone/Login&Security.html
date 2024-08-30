@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://icons.iconarchive.com/icons/bokehlicia/pacifica/256/amazon-icon.png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazone-Home Page</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            color: white;
+            height: 60px;
+            background-color: #131921;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* flex-direction: row-reverse;
+                    flex-direction: column;
+                    flex-direction: column-reverse; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+        }
+
+        #leftDiv {
+            display: flex;
+            /* border: 1px solid white; */
+            width: 22%;
+            height: 80%;
+            justify-content: space-between;
+            /* border: 1px solid blue; */
+        }
+
+        #logoDiv {
+            width: 44%;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #logoDiv:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #addressDiv {
+            width: 54%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+
+        #addressDiv:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #addressP {
+            color: rgb(205, 204, 204);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #addressh5 {
+            font-size: 14px;
+            /* letter-spacing: 6px; */
+        }
+
+        #centerDiv {
+            width: 50%;
+            /* border: 4px solid red; */
+            display: flex;
+            height: 66%;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        #centerDiv:focus-within {
+            border: 3px solid #faaa42;
+        }
+
+        #centerSection {
+            height: 100%;
+            width: 8%;
+            /* border: 1px solid red; */
+            border-radius: 6px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgb(190, 190, 190);
+        }
+
+        #centerSection:hover {
+            background-color: #d5d5d5;
+        }
+
+        #centerSection p,
+        span {
+            font-size: 12px;
+            color: rgb(96, 96, 96);
+        }
+
+        #centerSearch {
+            height: 100%;
+            width: 84%;
+            /* border: 1px solid white; */
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+
+        #centerSearch input {
+            height: 24px;
+            width: 96%;
+            margin: auto;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+
+        #centerIcon {
+            height: 100%;
+            width: 8%;
+            /* border: 1px solid white; */
+            background-color: #febd69;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #centerIcon:hover {
+            background-color: #faaa42;
+        }
+
+        #centerIcon span {
+            font-size: 30px;
+            color: black;
+        }
+
+        #rightDiv {
+            width: 26%;
+            height: 100%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #rightLang {
+            width: 18%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rightLang>p {
+            margin-left: 6px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        #rightLang>span {
+            color: rgb(206, 206, 206);
+        }
+
+        #rightAccount {
+            width: 30%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        #rightAccount:Hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #rightAccount p {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #rightAccount span {
+            margin-top: -6px;
+        }
+
+        #rightOrders {
+            width: 16%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #rightOrders p {
+            font-size: 12px;
+        }
+
+        #rightOrders:Hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #rightCart {
+            width: 22%;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rightCart:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #rightCart span {
+            color: white;
+        }
+
+        #rightCart span:nth-child(1) {
+            font-size: 36px;
+        }
+
+        #rightCart span:last-child {
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 16px;
+        }
+
+        #rightCart a span.material-symbols-outlined {
+            display: inline-block !important;
+            color: red !important;
+            font-size: 36px !important;
+        }
+
+        #rightCart span:nth-child(1) {
+            display: none;
+        }
+
+        #rightCart span:nth-child(2) {
+            display: none;
+        }
+
+        .login-security-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        .header h2 {
+            margin-top: 0;
+        }
+
+        .main-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .row-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .row-box h4 {
+            margin-bottom: 20px;
+        }
+
+        .info {
+            flex-grow: 1;
+        }
+
+        .info h3 {
+            margin-top: 0;
+        }
+
+        .edit-btn,
+        .add-btn,
+        .setup-btn,
+        .turn-on-btn,
+        .start-btn {
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 150px;
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .warning {
+            color: #ffff00 !important;
+            /* Yellow text color */
+            padding: 0;
+            /* Remove padding */
+            border-radius: 0;
+            /* Remove border radius */
+            /* Yellow background */
+
+
+            display: flex;
+            /* Add this to align icon and text in the same line */
+            align-items: center;
+            /* Add this to vertically center the icon and text */
+        }
+
+        .warning-icon {
+            height: 20px;
+            /* Adjust the height to your liking */
+            margin-right: 10px;
+            /* Add some space between the icon and text */
+            vertical-align: middle;
+            /* Align the icon with the text */
+            display: inline-block;
+            /* Display icon and text on the same line */
+        }
+
+
+        #navBelt {
+            color: white;
+            background-color: #232f3e;
+            font-weight: 400px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            height: 38px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #All {
+            height: 96%;
+            width: 4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #All>p {
+            font-weight: 700;
+        }
+
+        #All>span {
+            color: white;
+        }
+
+        #All:hover {
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+
+        #fresh {
+            height: 96%;
+            width: 4%;
+            padding-left: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        #miniTv {
+            height: 96%;
+            width: 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        #sell {
+            height: 96%;
+            width: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .navFooter {
+            border: 1px solid black;
+            text-align: center;
+            height: 30px;
+            color: rgb(255, 255, 255);
+            padding-top: 15px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 19px;
+            background-color: #37475a;
+        }
+
+        .footerParent {
+            padding: 20px 20px 0 150px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* border: 1px solid black; */
+            background-color: #232f3e;
+        }
+
+        .footerChild {
+            /* border: 1px solid black; */
+            width: 20%;
+            height: 100%;
+            text-align: left;
+        }
+
+        .footerP {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16.8px;
+            color: rgb(255, 255, 255);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bottomPTag {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: white;
+            line-height: 30px;
+            text-align: left;
+        }
+
+        .bottomPTag:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div id="leftDiv">
+                <div id="menu">
+                    <span class="material-symbols-outlined"> menu </span>
+                </div>
+                <div id="logoDiv">
+                    <a href="index.html">
+                        <img style="height: 78%; width: 84%"
+                            src="https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png"
+                            alt="Amazon" />
+                    </a>
+                </div>
+                <div id="addressDiv">
+                    <span class="material-symbols-outlined"> location_on </span>
+                    <div>
+                        <p id="addressP">Delivering to Mumbai 400070</p>
+                        <h5>Update Location</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="centerDiv">
+                <div id="centerSection">
+                    <p>All</p>
+                    <span class="material-symbols-outlined"> arrow_drop_down </span>
+                </div>
+                <div id="centerSearch">
+                    <input type="text" placeholder="Search Amazon.in" />
+                </div>
+                <div id="centerIcon">
+                    <span class="material-symbols-outlined"> search </span>
+                </div>
+            </div>
+            <div id="rightDiv">
+                <div id="rightLang">
+                    <img style="height: 14px; width: 20px"
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+                        alt="flag" />
+                    <p>EN</p>
+                    <span class="material-symbols-outlined"> arrow_drop_down </span>
+                </div>
+                <div id="rightAccount">
+                    <p>Hello, sign in</p>
+                    <div style="display: flex">
+                        <h5>Account & List</h5>
+                        <span class="material-symbols-outlined"> arrow_drop_down </span>
+                    </div>
+                </div>
+                <div id="rightOrders">
+                    <p>Returns</p>
+                    <h5>& Orders</h5>
+                </div>
+                <div id="rightCart">
+                    <span class="material-symbols-outlined"> person </span>
+                    <span>Login</span>
+                    <a href="Checkoutpage.html">
+                        <span class="material-symbols-outlined"> shopping_cart </span>
+                        <span>Cart</span></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="navBelt">
+            <div class="menuHover" id="All">
+                <span class="material-symbols-outlined"> menu </span>
+                <p>All</p>
+            </div>
+            <div class="menuHover" id="fresh">
+                <p>Fresh</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+            </div>
+            <div class="menuHover" id="miniTv">Amazon miniTv</div>
+            <div class="menuHover" id="sell">Sell</div>
+            <div class="menuHover" id="Bestseller">Best Sellers</div>
+            <div class="menuHover menuCss">Mobiles</div>
+            <div class="menuHover" id="Deals">Today's Deals</div>
+            <div class="menuHover menuCss">Fashion</div>
+            <div class="menuHover" id="prime">
+                <p>Prime</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+            </div>
+            <div class="menuHover" id="Electronics">Electronics</div>
+            <div class="menuHover" id="Customer_Service">Customer Service</div>
+            <div class="menuHover" id="NR">New Releases</div>
+            <div class="menuHover" id="hnk">Home & Kitchen</div>
+            <div class="menuHover" id="Pay">Amazon Pay</div>
+            <div class="menuHover" id="Computers">Computers</div>
+            <div class="menuHover" id="Books">Books</div>
+            <div class="menuHover" id="Car">Car & Moterbike</div>
+        </div>
+
+        <div class="login-security-container">
+            <div class="header">
+                <a href="account.html">Your Account ></a>
+                <span style="color:orangered; font-size:18px">Login and security</span>
+                <br>
+                <br>
+                <h3>Login and Security</h2>
+            </div>
+            <div class="main-box">
+                <div class="row-box">
+                    <div class="info">
+                        <h4>Name</h3>
+                            <p>Sanjkhob</p>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </div>
+                <hr>
+
+                <div class="row-box">
+                    <div class="info">
+                        <h4>Email</h3>
+
+                            <p><img src="https://cdn-icons-png.flaticon.com/128/4344/4344882.png" alt="Warning"
+                                    class="warning-icon">For stronger account security, add your email. If there’s an
+                                unusual
+                                sign-in, we’ll email
+                                you and verify that it’s really you.</p>
+                    </div>
+                    <button class="add-btn">Add</button>
+                </div>
+                <hr>
+                <div class="row-box">
+                    <div class="info">
+                        <h4>Primary mobile number</h3>
+                            <p>+919930284322</p>
+                            <p>Quickly sign in, easily recover passwords and receive security notifications with this
+                                mobile number</p>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </div>
+                <hr>
+                <div class="row-box">
+                    <div class="info">
+                        <h4>Passkey</h3>
+                            <p><img src="https://cdn-icons-png.flaticon.com/128/4344/4344882.png" alt="Warning"
+                                    class="warning-icon">Sign in the same way you unlock your device by using your face,
+                                fingerprint, or PIN.</p>
+                    </div>
+                    <button class="setup-btn">Set up</button>
+                </div>
+                <hr>
+                <div class="row-box">
+                    <div class="info">
+                        <h4>Password</h3>
+                            <p>**********</p>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </div>
+                <hr>
+                <div class="row-box">
+                    <div class="info">
+                        <h4>2-step verification</h3>
+                            <p><img src="https://cdn-icons-png.flaticon.com/128/4344/4344882.png" alt="Warning"
+                                    class="warning-icon">Add a layer of security. Require a code in addition to your
+                                password.</p>
+                    </div>
+                    <button class="turn-on-btn">Turn on</button>
+                </div>
+                <hr>
+                <div class="row-box">
+                    <div class="info">
+                        <h4>Compromised account?</h3>
+                            <p>Take steps like changing your password and signing out everywhere</p>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navFooter">Back to Top</div>
+
+        <footer class="footerParent">
+            <span class="footerChild">
+                <p class="footerP">Get to Know Us</p>
+                <p class="bottomPTag">About Us</p>
+                <p class="bottomPTag">Careers</p>
+                <p class="bottomPTag">Press Releases</p>
+                <p class="bottomPTag">Amazon Science</p>
+            </span>
+
+            <span class="footerChild">
+                <p class="footerP">Connect with Us</p>
+                <p class="bottomPTag">Facebook</p>
+                <p class="bottomPTag">Twitter</p>
+                <p class="bottomPTag">Instagram</p>
+            </span>
+
+            <span class="footerChild">
+                <p class="footerP">Make Money with Us</p>
+                <p class="bottomPTag">Sell on Amazon</p>
+                <p class="bottomPTag">Sell under Amazon Accelerator</p>
+                <p class="bottomPTag">Protect and Build Your Brand Amazon</p>
+                <p></p>
+                <p class="bottomPTag">Global Selling Become an Affiliate</p>
+                <p class="bottomPTag">Fulfilment by Amazon Advertise Your Products</p>
+                <p class="bottomPTag">Amazon Pay on Merchants</p>
+            </span>
+
+            <span class="footerChild">
+                <p class="footerP">Let Us Help You</p>
+                <p class="bottomPTag">COVID-19 and Amazon</p>
+                <p class="bottomPTag">Your Account</p>
+                <p class="bottomPTag">Returns Centre</p>
+                <p></p>
+                <p class="bottomPTag">Recalls and Product Safety Alerts</p>
+                <p class="bottomPTag">100% Purchase Protection</p>
+                <p class="bottomPTag">Amazon App Download</p>
+                <p class="bottomPTag">Help</p>
+            </span>
+        </footer>
+
+
+
+</body>
